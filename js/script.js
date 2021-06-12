@@ -12,13 +12,14 @@ var numeriUtente = [];
 console.log(numeriUtente);
 
 var numeriComuni = [];
+
+
+
+document.getElementById("numeri_giusti").innerHTML = numeriComuni;
 console.log(numeriComuni);
 
-
-
-
-
-
+document.getElementById("tot_giusti").innerHTML = numeriComuni.length;
+console.log(numeriComuni.length);
 
 
 document.getElementById("avvio").addEventListener("click", function(){
@@ -34,14 +35,11 @@ document.getElementById("avvio").addEventListener("click", function(){
     
     
     // Da li parte un timer di 30 secondi.
-    setTimeout(inserimentoNumUtente, 30*1000);
+    setTimeout(inserimentoNumUtente, 3*1000);
     
     
     //* funzioni
     // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-    
-    
-
     
     function inserimentoNumUtente() {
         for (i=0;i<5;i++){
@@ -50,21 +48,18 @@ document.getElementById("avvio").addEventListener("click", function(){
             
             if (numeroScelto === simonDice[i]) {
                 numeriComuni.push(numeroScelto);
-
+                
             }
-           
+            
             if (!numeriUtente.includes(numeroScelto) && numeroScelto > 0 && numeroScelto < 100){
                 numeriUtente.push(numeroScelto);
             }else {
                 alert ("numero già inserito o non valido! HAI PERSO UN'OPPORTUNITA'");
             }
-
             
         }
         return numeroScelto;
     }
     
-
 });
 
-  

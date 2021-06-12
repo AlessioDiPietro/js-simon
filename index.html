@@ -4,16 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
+
+    <main>
+
+        <div class="container">
+            <h1>SIMON'S DICE</h1>
+
+            <section>
+                <h2>Come Funziona ???</h2>
+                <p>
+                    Il gioco, al suo avvio, vi proporrà 5 numeri compresi tra 1 & 100 da memorizzare a mente.
+
+                    Successivamente decorreranno 30 secondi (meno tempo sarebbe stato facile non credi?!). Alla fine dei 30 secondi il gioco vi chiedera di inserire uno alla volta i numeri precedentemente proposti. <br>
+                    SICURI DI RICORDARE TUTTO?
+
+                </p>
+            </section>
     
-    <button id="avvio">avvio</button>
+            <section>
+                <button id="avvio" >inizia ora!</button>
+            </section>
+    
 
 
-    <div id="numeri_giusti"></div>
-
-    <div id="tot_giusti"></div>
+            <section>
+                <h3>I numeri che hai indovinato:</h3>
+                <div id="numeri_giusti"></div>
+            </section>
+    
+            <section>
+                <h3>Su 5 numeri hai indovinato:</h3>
+                <div id="tot_giusti"></div>
+            </section>
+    
+        </div>
+        
+    </main>
 
     
     <script src="js/script.js"></script>
