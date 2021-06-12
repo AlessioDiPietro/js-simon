@@ -14,11 +14,9 @@ console.log(numeriUtente);
 var numeriComuni = [];
 console.log(numeriComuni);
 
-for (var i = 0; i < simonDice.length; i++) {
-    if (simonDice[i] == numeriUtente[i]) {
-        numeriComuni.push(simonDice[i]);
-     }
-}
+
+
+
 
 
 
@@ -33,22 +31,27 @@ document.getElementById("avvio").addEventListener("click", function(){
         simonDice.push(numeroRand);
     }
     alert("SIMON\'S DICE: " + simonDice);
-
-
+    
+    
     // Da li parte un timer di 30 secondi.
     setTimeout(inserimentoNumUtente, 3*1000);
     
     
     //* funzioni
     // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+    
+    
 
-
-
-
+    
     function inserimentoNumUtente() {
         for (i=0;i<5;i++){
             
             var numeroScelto = parseInt(prompt("inserisci un numero da 1 a 100"));
+            
+            if (numeroScelto === simonDice[i]) {
+                numeriComuni.push(numeroScelto);
+            }
+           
             if (!numeriUtente.includes(numeroScelto) && numeroScelto > 1 && numeroScelto < 100){
                 numeriUtente.push(numeroScelto);
             }else {
