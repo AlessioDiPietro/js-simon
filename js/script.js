@@ -34,7 +34,7 @@ document.getElementById("avvio").addEventListener("click", function(){
     
     
     // Da li parte un timer di 30 secondi.
-    setTimeout(inserimentoNumUtente, 3*1000);
+    setTimeout(inserimentoNumUtente, 30*1000);
     
     
     //* funzioni
@@ -50,12 +50,13 @@ document.getElementById("avvio").addEventListener("click", function(){
             
             if (numeroScelto === simonDice[i]) {
                 numeriComuni.push(numeroScelto);
+
             }
            
-            if (!numeriUtente.includes(numeroScelto) && numeroScelto > 1 && numeroScelto < 100){
+            if (!numeriUtente.includes(numeroScelto) && numeroScelto > 0 && numeroScelto < 100){
                 numeriUtente.push(numeroScelto);
             }else {
-                alert ("numero già inserito o non valido!");
+                alert ("numero già inserito o non valido! HAI PERSO UN'OPPORTUNITA'");
             }
 
             
